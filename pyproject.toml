@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rnatrace"
+version = "0.1.0"
+description = "Automated RNA reconstruction from cryo-EM density and sequence"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.16,<2",
+    "torch>=2.8,<2.10",
+    "monai==1.5.1",
+    "mrcfile==1.5.4",
+    "elkai==2.0.1",
+    "openmm==8.4.0",
+    "einops>=0.7,<1",
+    "rotary-embedding-torch==0.5.3",
+    "PyYAML>=6,<7",
+    "setuptools>=68,<81",
+]
+
+[project.scripts]
+rnatrace = "rnatrace.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["rnatrace*"]

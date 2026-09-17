@@ -1,0 +1,13 @@
+*
+!.gitignore
+!.gitattributes
+!README.md
+!pyproject.toml
+!checkpoints/
+!checkpoints/*/
+!checkpoints/*/best.pt
+!rnatrace/
+!rnatrace/**/
+!rnatrace/**/*.py
+__pycache__/
+*.pyc
